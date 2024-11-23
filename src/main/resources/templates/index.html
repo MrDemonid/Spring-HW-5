@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Выберите действия</h1>
+
+    <!-- Меню с двумя пунктами -->
+    <div class="menu">
+        <a th:href="@{/users}" class="btn">Пользователи</a>
+        <a th:href="@{/projects}" class="btn">Проекты</a>
+    </div>
+</div>
+
+</body>
+</html>

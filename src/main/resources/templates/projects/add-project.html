@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление проекта.</title>
+    <link rel="stylesheet" th:href="@{/form-style.css}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Новый проект</h2>
+    <form action="#" th:action="@{/projects}" th:object="${project}" method="post">
+        <div class="form-group">
+            <label for="name">Название проекта:</label>
+            <input type="text" id="name" name="name" th:value="*{name}"  placeholder="Название" required>
+        </div>
+        <div class="form-group">
+            <label for="desc">Описание:</label>
+            <input type="text" id="desc" name="desc" th:value="*{desc}" placeholder="Описание">
+        </div>
+        <div class="button-group">
+            <button type="submit" class="submit-button" formmethod="post">Отправить</button>
+            <button type="button" class="cancel-button" onclick="history.back()">Отмена</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
